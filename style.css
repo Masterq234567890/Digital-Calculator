@@ -24,6 +24,22 @@ body {
   background: #fff;
 }
 
+.main-menu {
+  width: 100vw;
+  margin-top: 12vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-btn {
+  width: 240px;
+  font-size: 26px;
+  padding: 22px 0;
+  border-radius: 30px;
+  letter-spacing: 1px;
+}
+
 .center-container {
   width: 100vw;
   margin-top: 2vh;
@@ -123,6 +139,7 @@ footer {
     font-size: 21px;
   }
   .calc-btns { grid-template-columns: repeat(4, 22vw); }
+  .menu-btn { width: 92vw; font-size: 24px;}
 }
 
 @media (max-width:350px) {
