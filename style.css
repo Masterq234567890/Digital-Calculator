@@ -24,23 +24,24 @@ body {
   background: linear-gradient(90deg, #ff6a00, #ffcf00, #00ffcb, #00b5ff);
   background-size: 400% 400%;
   color: #fff;
-  box-shadow: 0 0 20px #ff8a00, 0 0 30px #00fffc;
+  /* Glow effect reduced below */
+  box-shadow: 0 0 8px #ff8a00, 0 0 10px #00fffc;
   cursor: pointer;
   transition: background 0.3s;
   animation: glow 2s linear infinite;
 }
 
 @keyframes glow {
-  0% { box-shadow: 0 0 20px #ff8a00, 0 0 30px #00fffc; background-position: 0% 50%; }
-  50% { box-shadow: 0 0 40px #00fffc, 0 0 50px #ff8a00; background-position: 100% 50%; }
-  100% { box-shadow: 0 0 20px #ff8a00, 0 0 30px #00fffc; background-position: 0% 50%; }
+  0% { box-shadow: 0 0 8px #ff8a00, 0 0 10px #00fffc; background-position: 0% 50%; }
+  50% { box-shadow: 0 0 16px #00fffc, 0 0 18px #ff8a00; background-position: 100% 50%; }
+  100% { box-shadow: 0 0 8px #ff8a00, 0 0 10px #00fffc; background-position: 0% 50%; }
 }
 
 .calculator-container {
   background: #222831;
   border-radius: 16px;
   padding: 30px 20px;
-  box-shadow: 0 0 24px #00ffcb50;
+  box-shadow: 0 0 18px #00ffcb30;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -67,7 +68,7 @@ body {
 
 .equals {
   grid-column: span 1;
-  background: #2af598; /* more glowing for = */
+  background: #2af598;
   color: #111;
 }
 
