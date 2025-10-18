@@ -37,7 +37,7 @@ body {
 }
 
 .calculator-container {
-  background: #f2f3f7;
+  background: #fff; /* Pure white background */
   border-radius: 16px;
   padding: 30px 20px;
   box-shadow: 0 0 18px #e6e6e6;
@@ -51,9 +51,9 @@ body {
   width: 280px;
   padding: 18px;
   font-size: 28px;
-  background: #e1e3ea;
+  background: #fff; /* Display background white */
   color: #222;
-  border: none;
+  border: 1px solid #eee;
   margin-bottom: 18px;
   border-radius: 8px;
   text-align: right;
