@@ -1,3 +1,8 @@
+function openCalculator() {
+    document.getElementById("mainMenu").style.display = "none";
+    document.getElementById("calculatorSection").style.display = "flex";
+}
+
 function addToDisplay(value) {
     const display = document.getElementById("display");
     display.value += value;
