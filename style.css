@@ -1,6 +1,6 @@
 body {
-  background: #161616;
-  color: #fff;
+  background: #fff;
+  color: #222;
   font-family: 'Arial', sans-serif;
   display: flex;
   justify-content: center;
@@ -24,7 +24,6 @@ body {
   background: linear-gradient(90deg, #ff6a00, #ffcf00, #00ffcb, #00b5ff);
   background-size: 400% 400%;
   color: #fff;
-  /* Glow effect reduced below */
   box-shadow: 0 0 8px #ff8a00, 0 0 10px #00fffc;
   cursor: pointer;
   transition: background 0.3s;
@@ -38,10 +37,10 @@ body {
 }
 
 .calculator-container {
-  background: #222831;
+  background: #f2f3f7;
   border-radius: 16px;
   padding: 30px 20px;
-  box-shadow: 0 0 18px #00ffcb30;
+  box-shadow: 0 0 18px #e6e6e6;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,8 +51,8 @@ body {
   width: 280px;
   padding: 18px;
   font-size: 28px;
-  background: #393e46;
-  color: #fff;
+  background: #e1e3ea;
+  color: #222;
   border: none;
   margin-bottom: 18px;
   border-radius: 8px;
@@ -69,7 +68,7 @@ body {
 .equals {
   grid-column: span 1;
   background: #2af598;
-  color: #111;
+  color: #222;
 }
 
 @media (max-width: 768px) {
