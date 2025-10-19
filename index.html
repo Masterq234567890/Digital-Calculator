@@ -1,50 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="mr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Simple Calculator</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Project</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Logo Top Right -->
-  <div class="logo-container">
-    <img src="logo.png" alt="Logo" class="logo-glow">
-  </div>
-  
-  <!-- Main menu -->
-  <div class="main-menu" id="mainMenu">
-    <button class="glow-btn menu-btn" onclick="openCalculator()">Simple Calculator</button>
-  </div>
-
-  <!-- Calculator Center -->
-  <div class="center-container" id="calculatorSection" style="display: none;">
-    <div class="calculator-container">
-      <input type="text" id="display" disabled />
-      <div class="calc-btns">
-        <button onclick="addToDisplay('7')" class="glow-btn">7</button>
-        <button onclick="addToDisplay('8')" class="glow-btn">8</button>
-        <button onclick="addToDisplay('9')" class="glow-btn">9</button>
-        <button onclick="addToDisplay('/')" class="glow-btn">/</button>
-        <button onclick="addToDisplay('4')" class="glow-btn">4</button>
-        <button onclick="addToDisplay('5')" class="glow-btn">5</button>
-        <button onclick="addToDisplay('6')" class="glow-btn">6</button>
-        <button onclick="addToDisplay('*')" class="glow-btn">*</button>
-        <button onclick="addToDisplay('1')" class="glow-btn">1</button>
-        <button onclick="addToDisplay('2')" class="glow-btn">2</button>
-        <button onclick="addToDisplay('3')" class="glow-btn">3</button>
-        <button onclick="addToDisplay('-')" class="glow-btn">-</button>
-        <button onclick="addToDisplay('0')" class="glow-btn">0</button>
-        <button onclick="addToDisplay('.')" class="glow-btn">.</button>
-        <button onclick="addToDisplay('+')" class="glow-btn">+</button>
-        <button onclick="calculate()" class="glow-btn equals">=</button>
-      </div>
+    <!-- सुरुवातीचे ॲनिमेशन -->
+    <div id="animation-container">
+        <div id="animated-box">
+            <img src="masterlogo.png" alt="Logo Animation" id="animated-logo">
+        </div>
     </div>
-  </div>
-  
-  <footer>
-    Created By Mr Master
-  </footer>
-  <script src="script.js"></script>
+
+    <!-- मुख्य पेज -->
+    <div id="main-page" style="display: none;">
+        <img src="masterlogo.png" alt="Master Logo" id="master-logo-top">
+        <div class="button-container">
+            <button id="code-btn" class="glowing-btn">Code</button>
+            <button id="diagram-btn" class="glowing-btn">Diagram</button>
+        </div>
+    </div>
+
+    <!-- कोड सेक्शन -->
+    <div id="code-section" style="display: none;">
+        <div id="subscribe-animation-code">SUBSCRIBE</div>
+        <div id="code-box-container" style="display: none;">
+            <div class="glowing-box code-box">
+                <pre><code id="code-content">
+#include&lt;SoftwareSerial.h&gt;
+
+SoftwareSerial Serial1(2,3); //make RX arduino line is pin 2, make TX arduino line is pin 3.
+SoftwareSerial gps(10,11);
+
+#include&lt;LiquidCrystal.h&gt;
+LiquidCrystal lcd(4,5,6,7,8,9);
+
+#define x A1
+#define y A2
+#define z A3
+
+int xsample=0;
+int ysample=0;
+int zsample=0;
+
+#define samples 10
+#define minVal -50
+#define MaxVal 50
+
+// ... (बाकीचा कोड जसाच्या तसा राहील) ...
+
+void serialPrint()
+{
+  while(Serial1.available()&gt;0)
+  {
+    Serial.print(Serial1.read());
+  }
+}
+                </code></pre>
+            </div>
+            <button id="copy-btn" class="glowing-btn">Copy Code</button>
+            <div class="glowing-box" style="margin-top: 20px;">
+                <img src="diagram.png" alt="Diagram" class="responsive-img">
+            </div>
+        </div>
+    </div>
+
+    <!-- डायग्राम सेक्शन -->
+    <div id="diagram-section" style="display: none;">
+        <div id="subscribe-animation-diagram">SUBSCRIBE</div>
+        <div id="diagram-box-container" style="display: none;">
+            <div class="glowing-box">
+                <img src="codescreenshot.png" alt="Code Screenshot" class="responsive-img">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
-</html>
+          </html>
