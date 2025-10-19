@@ -107,7 +107,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    padding-top: 100px; /* Logo साठी जागा */
+    padding-top: 100px;
 }
 
 #code-box-container, #diagram-box-container {
@@ -158,4 +158,4 @@ pre {
     0% { border-color: #ff00ff; box-shadow: 0 0 20px #ff00ff; }
     50% { border-color: #00ffff; box-shadow: 0 0 30px #00ffff; }
     100% { border-color: #ff00ff; box-shadow: 0 0 20px #ff00ff; }
-    }
+        }
